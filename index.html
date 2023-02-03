@@ -11,11 +11,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Static Template</title>
   </head>
-  <body class="flex justify-center items-center flex-col bg-stone-900">
+  <body class="bg-stone-900">
     <header class="flex justify-center gap-3 p-5 bg-white w-full">
-      <div class="w-1/2 flex items-center">
+      <div class="w-1/2 flex lg:items-center">
         <img src="./assets/download.png" class="mr-auto" />
-        <div class="text-stone-400 uppercase flex gap-5 font-extrabold">
+          <i class="fa fa-regular fa-bars :hidden align-middle lg:hidden"></i>
+        <div
+          class="text-stone-400 uppercase flex lg:gap-5 font-bold hidden lg:block"
+        >
           <a href="#"> page 1 </a>
           <a href="#"> page 2 </a>
           <a href="#"> page 3 </a>
@@ -30,42 +33,46 @@
       </div>
     </header>
 
-    <main class="w-1/2 h-100 flex gap-2 m-20">
-      <article class="grid-cols-2 grid gap-3 gap-y h-full w-2/3">
-        <div class="w-full h-[40vh]">
-          <img
-            class="object-cover h-full w-full"
-            src="./assets/download-1.jpg"
-            alt="Purple woman eating"
-          />
-        </div>
-        <div class="w-full h-[40vh]">
-          <img
-            class="object-cover h-full w-full"
-            src="./assets/download.jpg"
-            alt="purple smoothie"
-          />
-        </div>
-        <div class="w-full h-[40vh] bg-orange-600 text-white p-5">
-          <h3 class="font-extrabold text-2xl mb-4">Blarg plop yolo</h3>
-          <p class="font-bold">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
-            quia explicabo itaque, beatae illo, qui hic consequuntur cupiditate
-            placeat aut distinctio doloremque mollitia nam, ducimus esse omnis
-            ut expedita eum veritatis minus eveniet ex voluptatibus. Laborum
-            optio molestias ullam laboriosam nam nulla illo sapiente tempore
-            placeat. Eaque deleniti reprehenderit quos.
-          </p>
-        </div>
-        <div class="w-full h-[40vh]">
-          <img class="object-cover h-full w-full" src="./assets/download-2.jpg" alt="melons" />
-        </article>
-        <aside
-          class="w-1/3 h-100 bg-white p-5 flex gap-5 items-start justify-center flex-col"
-        >
-
-        </div>
-        <h4 class="font-extrabold text-orange-600 text-5xl">Welcome</h4>
+    <main class="flex justify-center"
+    >
+    <div class="relative grid gap-2 my-16 mx-10 grid-cols-1 md:grid-rows-3 md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 lg:w-3/5">
+<div
+        class="absolute h-96 w-80 bg-orange-600 z-10 -right-8 -top-8 md:h-64"
+      ></div>
+      <div class="z-20">
+        <img
+          class="object-cover h-72 w-full"
+          src="./assets/download-1.jpg"
+          alt="Purple woman eating"
+        />
+      </div>
+      <div class="z-20">
+        <img
+          class="object-cover h-72 w-full"
+          src="./assets/download.jpg"
+          alt="purple smoothie"
+        />
+      </div>
+      <div class="w-full bg-orange-600 text-white p-5 z-20 space-y-3">
+        <h1 class="font-semibold text-xl">Blarg plop yolo</h3>
+        <p class="lg:text-sm">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit
+          quia explicabo itaque, beatae illo, qui hic consequuntur cupiditate
+          placeat aut distinctio doloremque mollitia nam, ducimus esse omnis ut
+          expedita eum veritatis.
+        </p>
+      </div>
+      <div class="z-20">
+        <img
+          class="object-cover h-72 w-full"
+          src="./assets/download-2.jpg"
+          alt="melons"
+        />
+      </div>
+      <div
+        class="p-4 lg:row-start-1 lg:col-start-3 lg:row-span-2 lg:col-span-2 md:col-span-2 bg-white z-20 flex flex-col justify-center space-y-3 z-20"
+      >
+        <h1 class="font-extrabold text-orange-600 text-3xl">Welcome</h4>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, vitae
           nesciunt expedita voluptas enim natus dicta provident. Dolores,
@@ -74,13 +81,17 @@
           quas totam odio error, alias numquam, voluptate ab facere a maxime
           enim harum?
         </p>
-        <a href="#" class="bg-orange-600 text-white text-sm py-2 px-5 font-bold"
+        <a href="#" class="w-fit bg-orange-600 text-white text-sm py-2 px-5 font-bold"
           >VIEW MENU</a
         >
-      </aside>
+      </div>
+    </div>
+      
     </main>
 
-    <footer class="bg-neutral-700 w-full h-24 p-5 flex gap-5 items-center justify-center text-2xl">
+    <footer
+      class="bg-neutral-700 w-full h-24 p-5 flex gap-5 items-center justify-center text-2xl"
+    >
       <i class="fa fa-facebook text-white"></i>
       <i class="fa fa-twitter text-white"></i>
       <i class="fa fa-instagram text-white"></i>
